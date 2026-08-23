@@ -3,400 +3,74 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#a62922">
-  <meta name="description" content="一家四口的13天中秋国庆家庭旅行：广州、洛阳、北京。">
-  <meta property="og:title" content="一家四口 · 13日团圆之旅">
-  <meta property="og:description" content="广州 → 洛阳 → 北京 → 洛阳 → 广州">
-  <title>一家四口 · 13日团圆之旅</title>
+  <meta name="theme-color" content="#173a31">
+  <meta name="description" content="2026北京圆梦之旅：广州出发，北京相聚，洛阳团圆。">
+  <meta property="og:title" content="2026北京圆梦之旅">
+  <meta property="og:description" content="一家四口 · 13天 · 广州出发 · 北京相聚 · 洛阳团圆">
+  <title>2026北京圆梦之旅</title>
   <style>
-    :root{--paper:#f2ede4;--card:#faf7f0;--ink:#25221f;--muted:#766f66;--line:#d7cfc3;--red:#a62922;--red2:#7f1e19;--dark:#2b2926;--gold:#a3814c;--shadow:0 18px 45px rgba(48,38,28,.09)}
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;background:var(--paper);color:var(--ink);font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;line-height:1.7}
-    button,input{font:inherit}
-    button{color:inherit}
-    a{color:inherit;text-decoration:none}
-    .grain{position:fixed;inset:0;pointer-events:none;opacity:.16;z-index:20;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.16'/%3E%3C/svg%3E")}
-    .hero{min-height:82svh;background:var(--dark);color:#f8f2e8;display:grid;align-content:end;padding:clamp(34px,8vw,84px) max(22px,calc((100vw - 920px)/2));position:relative;overflow:hidden}
-    .hero:before{content:"";position:absolute;width:520px;height:520px;border:1px solid rgba(255,255,255,.09);border-radius:50%;right:-180px;top:-160px;box-shadow:0 0 0 65px rgba(255,255,255,.025),0 0 0 130px rgba(255,255,255,.018)}
-    .hero:after{content:"十三日";position:absolute;right:5%;bottom:-4%;font:900 clamp(82px,22vw,220px)/1 serif;color:rgba(255,255,255,.025);letter-spacing:-.08em}
-    .eyebrow{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:#d5c7b2;margin-bottom:18px}
-    h1{font:500 clamp(46px,10vw,94px)/1.06 "Songti SC","SimSun",serif;letter-spacing:-.04em;margin:0;max-width:820px}
-    .hero-route{margin:24px 0 0;font-size:clamp(16px,3vw,22px);color:#d8d0c5;letter-spacing:.05em}
-    .hero-meta{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
-    .pill{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:8px 13px;font-size:12px;color:#eee4d7;background:rgba(255,255,255,.04)}
-    .live-dot{width:7px;height:7px;border-radius:50%;background:#d34b41;box-shadow:0 0 0 5px rgba(211,75,65,.13)}
-    main{max-width:920px;margin:auto;padding:0 22px 100px}
-    .progress-card{position:relative;margin:-32px auto 42px;background:var(--card);box-shadow:var(--shadow);border-radius:4px;padding:22px 24px;z-index:2;border-top:3px solid var(--red)}
-    .progress-head{display:flex;justify-content:space-between;gap:14px;align-items:end}
-    .progress-head strong{font:600 19px/1.4 "Songti SC",serif}
-    .progress-head span{font-size:12px;color:var(--muted)}
-    .track{height:5px;background:#dfd7cc;margin-top:16px;overflow:hidden;border-radius:5px}
-    .track i{display:block;height:100%;width:0;background:var(--red);transition:width .8s ease}
-    .intro{display:grid;grid-template-columns:1fr 1fr;gap:44px;padding:35px 0 60px;border-bottom:1px solid var(--line)}
-    .intro h2,.section-title{font:500 clamp(31px,6vw,50px)/1.18 "Songti SC","SimSun",serif;margin:0}
-    .intro p{margin:4px 0 0;color:var(--muted)}
-    .route-line{margin-top:24px;display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);overflow:hidden}
-    .route-line b{color:var(--red);font-weight:500;white-space:nowrap}
-    .route-line i{height:1px;min-width:18px;flex:1;background:var(--line)}
-    .sticky{position:sticky;top:0;z-index:12;margin:0 -22px;padding:12px 22px;background:rgba(242,237,228,.91);backdrop-filter:blur(14px);border-bottom:1px solid rgba(120,100,80,.12);display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
-    .sticky::-webkit-scrollbar{display:none}
-    .chip{white-space:nowrap;border:1px solid var(--line);background:rgba(250,247,240,.72);padding:8px 14px;border-radius:99px;font-size:12px;cursor:pointer;transition:.2s}
-    .chip:hover,.chip:focus-visible{border-color:var(--red)}
-    .chip.active{background:var(--red);border-color:var(--red);color:white}
-    .section-head{padding:66px 0 26px;display:flex;justify-content:space-between;gap:20px;align-items:end}
-    .section-head p{margin:0;color:var(--muted);font-size:13px}
-    .toggle-all{border:0;background:none;color:var(--red);cursor:pointer;padding:5px 0;font-size:13px}
-    .days{display:grid;gap:14px}
-    .day-card{background:var(--card);border:1px solid var(--line);border-radius:3px;overflow:hidden;transition:opacity .25s,transform .25s,box-shadow .25s}
-    .day-card[hidden]{display:none}
-    .day-card[open]{box-shadow:var(--shadow);transform:translateY(-2px)}
-    .day-card summary{list-style:none;cursor:pointer;padding:22px;display:grid;grid-template-columns:78px 1fr auto;gap:18px;align-items:center}
-    .day-card summary::-webkit-details-marker{display:none}
-    .date{border-right:1px solid var(--line)}
-    .date b{display:block;color:var(--red);font:600 22px/1.1 "Songti SC",serif}
-    .date small{font-size:10px;color:var(--muted);letter-spacing:.12em}
-    .day-name b{display:block;font:600 19px/1.35 "Songti SC",serif}
-    .day-name span{font-size:12px;color:var(--muted)}
-    .chevron{width:30px;height:30px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;transition:.25s}
-    .chevron:after{content:"+";font-size:18px;line-height:1}
-    details[open] .chevron{background:var(--red);color:#fff;border-color:var(--red);transform:rotate(45deg)}
-    .day-body{border-top:1px solid var(--line);padding:24px 24px 28px 120px}
-    .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:22px}
-    .fact{background:#eee8de;padding:12px 13px;min-height:70px}
-    .fact small{display:block;font-size:10px;color:var(--muted);letter-spacing:.12em}
-    .fact b{font-size:12px;font-weight:500}
-    .schedule{display:grid;gap:0}
-    .schedule div{position:relative;padding:0 0 18px 22px;border-left:1px solid #c9bfb1}
-    .schedule div:last-child{padding-bottom:3px}
-    .schedule div:before{content:"";position:absolute;width:7px;height:7px;background:var(--red);border-radius:50%;left:-4px;top:9px}
-    .schedule time{display:block;font-size:10px;color:var(--red);letter-spacing:.08em}
-    .schedule span{font-size:13px}
-    .reminder{margin-top:20px;padding:15px 16px;border-left:3px solid var(--gold);background:#f1eadf;font-size:12px;color:#5e554b}
-    .strength{display:inline-flex;gap:3px;margin-left:7px}
-    .strength i{width:12px;height:3px;background:#d7cec2}
-    .strength i.on{background:var(--red)}
-    .booking{margin-top:76px;background:var(--dark);color:#f5efe5;padding:clamp(24px,6vw,50px);border-radius:4px}
-    .booking .section-title{font-size:clamp(30px,6vw,46px)}
-    .booking-head{display:flex;align-items:end;justify-content:space-between;gap:16px;border-bottom:1px solid rgba(255,255,255,.13);padding-bottom:22px}
-    .booking-count{color:#ccbca8;font-size:12px}
-    .checks{display:grid;grid-template-columns:1fr 1fr;margin-top:8px}
-    .check{display:flex;align-items:center;gap:12px;padding:17px 8px;border-bottom:1px solid rgba(255,255,255,.1);cursor:pointer;font-size:13px}
-    .check:nth-child(odd){padding-right:22px}
-    .check input{appearance:none;width:20px;height:20px;border:1px solid #91887d;border-radius:50%;display:grid;place-items:center;flex:0 0 auto}
-    .check input:checked{background:var(--red);border-color:var(--red)}
-    .check input:checked:after{content:"✓";color:white;font-size:13px}
-    .check:has(input:checked) span{text-decoration:line-through;color:#948a7d}
-    .mini-track{height:2px;background:#5d5851;margin-top:22px}
-    .mini-track i{display:block;height:100%;background:#d04a41;width:0;transition:.3s}
-    .budget{padding-top:82px}
-    .budget-switch{display:flex;gap:7px;margin:24px 0}
-    .budget-switch button{border:1px solid var(--line);background:transparent;border-radius:99px;padding:8px 16px;font-size:12px;cursor:pointer}
-    .budget-switch button.active{background:var(--ink);color:#fff;border-color:var(--ink)}
-    .budget-grid{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--ink)}
-    .budget-row{padding:18px 8px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:14px;font-size:13px}
-    .budget-row:nth-child(odd){padding-right:30px}
-    .budget-row span{color:var(--muted)}
-    .budget-row b{font-weight:600;white-space:nowrap}
-    .budget-total{margin-top:26px;background:var(--red);color:#fff;padding:24px;display:flex;justify-content:space-between;align-items:center}
-    .budget-total span{font-size:12px;letter-spacing:.12em}
-    .budget-total b{font:500 clamp(26px,6vw,44px)/1 "Songti SC",serif}
-    .map-section{padding-top:82px}
-    .map{height:420px;background:#ded6ca;position:relative;overflow:hidden;border:1px solid #cec3b4}
-    .map:before,.map:after{content:"";position:absolute;inset:-20%;background:repeating-linear-gradient(24deg,transparent 0 52px,rgba(255,255,255,.55) 53px 56px,transparent 57px 90px);transform:rotate(-8deg)}
-    .map:after{background:repeating-linear-gradient(112deg,transparent 0 70px,rgba(123,111,96,.18) 71px 73px,transparent 74px 110px);transform:rotate(4deg)}
-    .pin{position:absolute;z-index:2;border:0;background:none;cursor:pointer;text-align:center;transform:translate(-50%,-50%)}
-    .pin i{display:grid;place-items:center;width:31px;height:31px;margin:auto;background:var(--red);color:#fff;border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 4px 12px rgba(60,30,20,.25)}
-    .pin i:after{content:"•";transform:rotate(45deg);font-style:normal}
-    .pin span{display:block;background:rgba(250,247,240,.94);padding:3px 7px;margin-top:5px;white-space:nowrap;font-size:10px}
-    .pin.active i{background:var(--ink);scale:1.15}
-    .map-note{position:absolute;left:18px;right:18px;bottom:18px;z-index:4;background:rgba(42,39,35,.92);color:#f5eee3;padding:17px 18px;backdrop-filter:blur(8px);display:flex;justify-content:space-between;gap:20px;align-items:center}
-    .map-note b{font:600 16px/1.3 "Songti SC",serif}
-    .map-note span{font-size:11px;color:#c9beb0}
-    footer{padding:58px 22px;background:var(--dark);color:#d5cabd;text-align:center}
-    footer b{display:block;color:#fff;font:500 24px/1.4 "Songti SC",serif}
-    footer small{font-size:11px}
-    .top{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom));z-index:15;border:0;background:var(--red);color:#fff;width:43px;height:43px;border-radius:50%;box-shadow:0 8px 24px rgba(80,30,20,.24);cursor:pointer;opacity:0;transform:translateY(10px);pointer-events:none;transition:.25s}
-    .top.show{opacity:1;transform:none;pointer-events:auto}
-    .empty{text-align:center;color:var(--muted);padding:50px 0;display:none}
-    @media(max-width:680px){
-      .hero{min-height:74svh;padding-bottom:62px}.intro{grid-template-columns:1fr;gap:18px;padding-bottom:40px}.section-head{padding-top:52px}
-      .day-card summary{grid-template-columns:66px 1fr auto;gap:13px;padding:18px 15px}.date b{font-size:18px}.day-name b{font-size:16px}.day-name span{font-size:11px}
-      .day-body{padding:20px 16px 22px}.facts{grid-template-columns:1fr}.fact{min-height:auto}.checks{grid-template-columns:1fr}.check:nth-child(odd){padding-right:8px}
-      .budget-grid{grid-template-columns:1fr}.budget-row:nth-child(odd){padding-right:8px}.budget-total{align-items:flex-end;gap:15px}.map{height:370px}
-    }
-    @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+    :root{--cream:#f3ecde;--paper:#f8f3e9;--green:#173a31;--green2:#25483d;--gold:#c9a65b;--red:#a53c2f;--ink:#1e2925;--muted:#68746d;--line:#d9ceba}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:"Songti SC","STSong","Noto Serif SC",Georgia,serif}button,input{font:inherit}button{color:inherit}a{color:inherit;text-decoration:none}.shell{overflow:hidden;padding-bottom:78px}.section{padding:96px max(22px,7vw)}
+    .hero{position:relative;min-height:100svh;padding:24px clamp(22px,5vw,72px) 42px;background:var(--green);color:#f8f0e3;isolation:isolate;display:flex;flex-direction:column}.hero:after{content:"";position:absolute;inset:0;z-index:-3;opacity:.12;background-image:radial-gradient(#fff .65px,transparent .65px);background-size:5px 5px}.hero-nav{display:flex;align-items:center;justify-content:space-between;position:relative;z-index:5}.brand{width:42px;height:42px;display:grid;place-items:center;border:1px solid rgba(246,226,187,.6);border-radius:50%;color:var(--gold);font-size:20px}.hero-date{font:500 12px/1 system-ui,sans-serif;letter-spacing:.22em;color:#dfcda9}.sun{position:absolute;width:min(70vw,430px);aspect-ratio:1;border-radius:50%;right:-20vw;top:13vh;z-index:-2;background:radial-gradient(circle at 35% 34%,#efd09a,#c48f44 64%,#9c6232);box-shadow:0 0 90px rgba(223,178,98,.2)}.gate{position:absolute;z-index:-1;background:#0e2a23;border-top:2px solid rgba(218,182,109,.3);box-shadow:0 -14px 0 -11px #294b41}.gate:before,.gate:after{content:"";position:absolute;top:-12px;height:12px;background:inherit;clip-path:polygon(12% 70%,44% 55%,48% 0,52% 0,56% 55%,88% 70%,100% 100%,0 100%)}.gate:before{left:-9%;width:118%}.gate:after{left:11%;width:78%;top:28px;opacity:.85}.gate.back{right:-4%;bottom:25%;width:72%;height:20%;opacity:.45}.gate.front{right:-9%;bottom:6%;width:100%;height:24%}.hero-copy{margin:auto 0 4vh;position:relative;z-index:2;max-width:760px}.eyebrow,.kicker{font:600 11px/1.4 system-ui,sans-serif;letter-spacing:.25em;color:var(--gold)}h1{font-size:clamp(62px,14vw,142px);line-height:.9;letter-spacing:-.07em;margin:20px 0 30px;font-weight:500}.hero-lead{font-size:clamp(17px,2vw,23px);line-height:1.8;color:#e7dac3}.route{width:min(100%,620px);display:grid;grid-template-columns:auto 1fr auto 1fr auto;gap:12px;align-items:center;padding:17px 18px;border:1px solid rgba(234,213,173,.22);border-radius:18px;background:rgba(242,233,214,.08);backdrop-filter:blur(12px);position:relative;z-index:3}.route div{display:flex;flex-direction:column;gap:5px}.route small{font:500 10px/1 system-ui,sans-serif;color:#adbeaf;letter-spacing:.12em}.route strong{font-size:16px;font-weight:500}.line{height:1px;background:rgba(221,196,149,.4)}.start{border:0;margin-top:20px;align-self:flex-start;position:relative;z-index:4;padding:15px 22px;border-radius:100px;background:var(--gold);color:#17342c;font:600 14px/1 system-ui,sans-serif;cursor:pointer}
+    .parent-toggle{position:fixed;right:14px;top:14px;z-index:20;border:1px solid rgba(255,255,255,.2);border-radius:100px;background:rgba(20,50,42,.92);color:#fff;box-shadow:0 8px 30px rgba(12,31,26,.18);backdrop-filter:blur(12px);padding:8px 13px;display:flex;align-items:center;gap:8px;font:600 12px/1 system-ui,sans-serif}.parent-toggle i{font-style:normal;display:grid;place-items:center;width:27px;height:27px;border-radius:50%;background:var(--gold);color:var(--green);font-weight:700}.parent-box{display:none;background:#fbf2df;padding:80px max(22px,7vw)}.parent-view .parent-box{display:block}.parent-view{font-size:19px}.parent-box h2,.intro h2,.heading h2,.budget h2,.wish-copy h2{font-size:clamp(37px,7vw,74px);line-height:1.16;letter-spacing:-.045em;font-weight:500;margin:22px 0}.parent-plan{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:42px}.parent-plan article{background:white;border-radius:20px;padding:25px;display:flex;flex-direction:column;gap:10px;border-top:4px solid var(--red)}.parent-plan b{font:600 13px/1 system-ui,sans-serif;color:var(--red)}.parent-plan strong{font-size:24px}.parent-plan span{color:var(--muted);line-height:1.6}.love-note{margin-top:16px;background:var(--green);border-radius:20px;color:white;padding:23px;line-height:1.8}.love-note strong{color:#f0d79e}
+    .intro{min-height:70vh;padding:96px max(22px,7vw);background:var(--paper)}.intro>p:not(.kicker){max-width:680px;font-size:18px;line-height:1.9;color:#52615b}.facts{display:grid;grid-template-columns:repeat(3,1fr);max-width:720px;margin-top:60px;border-top:1px solid #cfc4b2;padding-top:28px}.facts div{display:flex;flex-direction:column;gap:7px}.facts strong{font:400 clamp(38px,6vw,66px)/1 Georgia,serif;color:var(--red)}.facts span{font:500 12px/1 system-ui,sans-serif;color:#6e786f}
+    .heading{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:54px}.heading>p{color:var(--muted);font:500 12px/1.5 system-ui,sans-serif}.itinerary{background:#e8dfd0}.timeline{max-width:1050px;margin:auto}.day{border-top:1px solid #c7bba7}.day:last-child{border-bottom:1px solid #c7bba7}.day summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:44px 100px 1fr auto;gap:18px;align-items:center;padding:23px 0}.day summary::-webkit-details-marker{display:none}.day-icon{width:42px;height:42px;border:1px solid #b6a993;border-radius:50%;display:grid;place-items:center}.day-date{display:flex;flex-direction:column;gap:6px}.day-date b{font:500 20px/1 Georgia,serif}.day-date small,.day-main small{font:500 11px/1.5 system-ui,sans-serif;color:#6f776f}.day-main{display:flex;flex-direction:column;gap:6px}.day-main strong{font-size:22px;font-weight:500}.plus{font:300 26px/1 system-ui,sans-serif;color:#777}.day[open] .day-icon{background:var(--red);border-color:var(--red);color:#fff}.day[open] .plus{transform:rotate(45deg)}.day-body{margin:0 0 25px 62px;background:var(--paper);border-radius:18px;padding:24px 27px;display:grid;grid-template-columns:1.15fr .85fr;gap:24px}.day-list p{margin:0;padding:10px 0;border-bottom:1px solid #e5dccd;display:flex;gap:14px;line-height:1.6}.day-list p:last-child{border:0}.day-list b{font:500 10px/1.8 system-ui,sans-serif;color:var(--red)}.tip{margin:0;background:var(--green);color:#f5e9d5;border-radius:15px;padding:22px;font-size:17px;line-height:1.75}
+    .wish{background:var(--green);color:#f5ecdc;display:grid;grid-template-columns:.8fr 1.2fr;gap:7vw}.wish-copy p:last-child{color:#b9c8c2;line-height:1.9}.wish-grid{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(230,211,173,.25)}.wish-grid div{padding:25px 5px;border-bottom:1px solid rgba(230,211,173,.25);display:grid;grid-template-columns:32px 1fr 24px;align-items:center;gap:9px}.wish-grid div:nth-child(odd){padding-right:24px;border-right:1px solid rgba(230,211,173,.25)}.wish-grid div:nth-child(even){padding-left:24px}.wish-grid span{font:500 10px/1 system-ui,sans-serif;color:var(--gold)}.wish-grid strong{font-size:18px;font-weight:500}.wish-check{font-style:normal;color:var(--gold);font-size:21px}
+    .reminders{background:var(--paper)}.reminder-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.reminder{min-height:235px;border-radius:18px;background:#eee5d6;padding:22px;display:flex;flex-direction:column;border-top:4px solid var(--red)}.reminder:nth-child(2){border-color:var(--gold)}.reminder:nth-child(3){border-color:var(--green)}.reminder-top{display:flex;justify-content:space-between;font:600 10px/1 system-ui,sans-serif}.reminder h3{font-size:21px;font-weight:500;margin:auto 0 12px}.reminder p{font:400 12px/1.75 system-ui,sans-serif;color:#56635c;margin:0}
+    .budget{background:var(--gold);display:grid;grid-template-columns:.85fr 1.15fr;gap:7vw}.budget-total{margin-top:40px;padding-top:20px;border-top:1px solid rgba(23,58,49,.3);display:flex;flex-direction:column;gap:7px}.budget-total small,.budget-total span{font:600 11px/1.4 system-ui,sans-serif}.budget-total strong{font:400 clamp(46px,7vw,78px)/1 Georgia,serif}.budget-list{border-top:1px solid rgba(23,58,49,.25)}.budget-list label{padding:16px 0;border-bottom:1px solid rgba(23,58,49,.25);display:grid;grid-template-columns:1fr minmax(130px,180px);gap:12px;align-items:center}.budget-name{display:flex;flex-direction:column;gap:4px}.budget-name strong{font-size:16px}.budget-name small{font:500 11px/1 system-ui,sans-serif;color:#53604d}.money{display:flex;gap:5px;align-items:center;font:500 14px/1 system-ui,sans-serif}.money input{width:100%;border:0;border-bottom:1px solid rgba(23,58,49,.45);background:transparent;padding:8px 0;outline:0;color:var(--green)}.balance{grid-column:2;background:var(--green);color:#fff;padding:20px;border-radius:15px;display:grid;grid-template-columns:1fr auto;gap:7px}.balance strong{color:#efd79c;font-size:24px}.balance small{grid-column:1/-1;font:400 10px/1.4 system-ui,sans-serif;color:#a9bbb4}
+    .checklist{background:#ede5d8}.progress{height:4px;background:#d5c9b8;max-width:1080px;margin:-34px auto 48px;border-radius:10px;overflow:hidden}.progress i{display:block;height:100%;background:var(--red);transition:.3s}.check-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.check-card{background:var(--paper);padding:22px;border-radius:18px}.check-card h3{font-size:18px;font-weight:500;margin:0 0 15px}.check-card label{display:flex;gap:9px;align-items:center;padding:11px 0;border-top:1px solid #e2d8c7;cursor:pointer;font:400 13px/1.4 system-ui,sans-serif}.check-card input{position:absolute;opacity:0}.check-card i{width:19px;height:19px;border:1px solid #afa28e;border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:11px;color:#fff}.check-card label.done{color:#8a928d;text-decoration:line-through}.check-card label.done i{background:var(--red);border-color:var(--red)}
+    footer{min-height:65vh;padding:90px 22px;background:var(--red);color:#fff2df;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}footer h2{font-size:clamp(34px,6vw,66px);font-weight:500;line-height:1.24;letter-spacing:-.04em;max-width:850px;margin:25px 0}footer p{color:#f1c7bc}footer small{font:500 11px/1 system-ui,sans-serif;letter-spacing:.16em}
+    .bottom{position:fixed;z-index:18;left:50%;bottom:max(10px,env(safe-area-inset-bottom));transform:translateX(-50%);width:min(calc(100% - 22px),520px);border-radius:19px;padding:7px 9px;background:rgba(19,50,42,.94);backdrop-filter:blur(16px);display:grid;grid-template-columns:repeat(5,1fr);box-shadow:0 14px 40px rgba(15,32,27,.2)}.bottom button{border:0;background:transparent;color:#d7ded9;display:flex;flex-direction:column;align-items:center;gap:4px;padding:5px 0;font:500 10px/1 system-ui,sans-serif}.bottom span{font:500 16px/1 serif;color:#d8bd7d}
+    @media(max-width:900px){.wish,.budget{grid-template-columns:1fr}.parent-plan{grid-template-columns:1fr}.reminder-grid,.check-grid{grid-template-columns:1fr 1fr}.balance{grid-column:1}.day-body{grid-template-columns:1fr}.heading{align-items:flex-start;flex-direction:column}}
+    @media(max-width:600px){.section,.intro{padding:78px 21px}.hero{min-height:860px}.hero-copy{margin-top:25vh}.route{padding:15px 13px;gap:7px}.route strong{font-size:14px}.heading h2,.wish-copy h2,.budget h2{font-size:39px}.heading{margin-bottom:35px}.day summary{grid-template-columns:38px 72px 1fr 20px;gap:10px}.day-icon{width:37px;height:37px}.day-date b{font-size:16px}.day-main strong{font-size:18px}.day-main small{display:none}.day-body{margin:0 0 22px;padding:19px}.reminder-grid,.check-grid{grid-template-columns:1fr}.reminder{min-height:195px}.wish-grid{grid-template-columns:1fr}.wish-grid div:nth-child(odd),.wish-grid div:nth-child(even){padding:21px 4px;border-right:0}.budget-list label{grid-template-columns:1fr 120px}.progress{margin:-24px 0 38px}.parent-box{padding:78px 21px}.parent-box h2{font-size:40px}.parent-view .day-main small{display:block;font-size:13px}.parent-view .day-main strong{font-size:21px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
   </style>
 </head>
 <body>
-  <div class="grain" aria-hidden="true"></div>
-  <header class="hero">
-    <div class="eyebrow">Family Journey · 2026</div>
-    <h1>把长假，<br>留给团圆与远方。</h1>
-    <p class="hero-route">广州 → 洛阳 → 北京 → 洛阳 → 广州</p>
-    <div class="hero-meta">
-      <span class="pill">09.25 — 10.07</span>
-      <span class="pill">一家四口 · 13天</span>
-      <span class="pill"><i class="live-dot"></i><span id="tripStatus">正在计算旅程时间</span></span>
-    </div>
-  </header>
-
-  <main>
-    <section class="progress-card" aria-label="旅程进度">
-      <div class="progress-head"><strong id="progressTitle">距离出发还有一段期待</strong><span id="progressText">0%</span></div>
-      <div class="track"><i id="tripProgress"></i></div>
-    </section>
-
-    <section class="intro">
-      <h2>这不是赶景点，<br>是一段四个人的共同记忆。</h2>
-      <div>
-        <p>避开国庆北京高峰，用三天看父母最惦记的天安门、故宫和长城；余下的时间，在洛阳陪伴，也给两个人留一点安静恢复的空间。</p>
-        <div class="route-line"><b>广州</b><i></i><b>洛阳</b><i></i><b>北京</b><i></i><b>回家</b></div>
-      </div>
-    </section>
-
-    <nav class="sticky" aria-label="筛选行程">
-      <button class="chip active" data-filter="all">全部行程</button>
-      <button class="chip" data-filter="transit">交通日</button>
-      <button class="chip" data-filter="beijing">北京三日</button>
-      <button class="chip" data-filter="rest">家庭 / 休息</button>
-    </nav>
-
-    <section id="itinerary">
-      <div class="section-head">
-        <div><p>DAILY PLAN</p><h2 class="section-title">每日行程</h2></div>
-        <button class="toggle-all" id="toggleAll">全部展开</button>
-      </div>
-      <div class="days">
-        <details class="day-card" data-type="transit" open>
-          <summary><div class="date"><b>09.25</b><small>DAY 01</small></div><div class="day-name"><b>广州 → 洛阳</b><span>中秋回家，只做一件事：团圆</span></div><i class="chevron"></i></summary>
-          <div class="day-body">
-            <div class="facts"><div class="fact"><small>交通</small><b>高铁｜广州南 → 洛阳龙门</b></div><div class="fact"><small>建议时间</small><b>上午出发，17:00 前抵达</b></div><div class="fact"><small>强度</small><b>轻松 <span class="strength"><i class="on"></i><i></i><i></i></span></b></div></div>
-            <div class="schedule"><div><time>出发前</time><span>吃好早餐，给进站和安检多留一点时间。</span></div><div><time>下午</time><span>抵达洛阳后直接回家，不加任何景区。</span></div><div><time>晚上</time><span>一家四口中秋家宴、聊天、月饼和合照。</span></div></div>
-            <div class="reminder">预约提醒｜车票放出后优先选择白天直达；夫妻二人二等座即可。</div>
-          </div>
-        </details>
-
-        <details class="day-card" data-type="rest">
-          <summary><div class="date"><b>09.26</b><small>DAY 02</small></div><div class="day-name"><b>洛阳家庭日</b><span>慢下来，陪爸妈过一天日常</span></div><i class="chevron"></i></summary>
-          <div class="day-body">
-            <div class="facts"><div class="fact"><small>交通</small><b>市内步行 / 家庭用车</b></div><div class="fact"><small>建议时间</small><b>全天留白</b></div><div class="fact"><small>强度</small><b>很轻松 <span class="strength"><i class="on"></i><i></i><i></i></span></b></div></div>
-            <div class="schedule"><div><time>上午</time><span>逛菜市场、喝汤、陪爸妈聊天。</span></div><div><time>下午</time><span>午睡；有精神就去洛浦公园散步。</span></div><div><time>晚上</time><span>一起检查北京行李和证件。</span></div></div>
-            <div class="reminder">随身清单｜身份证、常用药、舒适鞋、薄外套、保温杯、充电宝。</div>
-          </div>
-        </details>
-
-        <details class="day-card" data-type="transit beijing">
-          <summary><div class="date"><b>09.27</b><small>DAY 03</small></div><div class="day-name"><b>洛阳 → 北京</b><span>不赶早，把体力留给北京</span></div><i class="chevron"></i></summary>
-          <div class="day-body">
-            <div class="facts"><div class="fact"><small>交通</small><b>高铁｜洛阳龙门 → 北京西</b></div><div class="fact"><small>建议时间</small><b>下午出发，19:00 前抵达</b></div><div class="fact"><small>强度</small><b>适中 <span class="strength"><i class="on"></i><i class="on"></i><i></i></span></b></div></div>
-            <div class="schedule"><div><time>上午</time><span>继续在家，中午和爸妈一起吃饭。</span></div><div><time>下午</time><span>乘高铁前往北京，抵达后直接去酒店。</span></div><div><time>入住</time><span>前门 / 和平门 / 宣武门附近，两间房。</span></div></div>
-            <div class="reminder">入住提醒｜不坐最晚班次，21:30 前回到酒店休息。</div>
-          </div>
-        </details>
-
-        <details class="day-card" data-type="beijing">
-          <summary><div class="date"><b>09.28</b><small>DAY 04</small></div><div class="day-name"><b>天坛 → 前门 → 大栅栏</b><span>北京第一天，轻松进入节奏</span></div><i class="chevron"></i></summary>
-          <div class="day-body">
-            <div class="facts"><div class="fact"><small>交通</small><b>地铁 + 步行｜约 8千—1.2万步</b></div><div class="fact"><small>建议时间</small><b>08:30 出门，19:30 回</b></div><div class="fact"><small>强度</small><b>适中 <span class="strength"><i class="on"></i><i class="on"></i><i></i></span></b></div></div>
-            <div class="schedule"><div><time>09:00—11:30</time><span>天坛：祈年殿、回音壁、圜丘，慢慢走。</span></div><div><time>中午</time><span>附近吃饭，留足午休和坐下来的时间。</span></div><div><time>16:00 后</time><span>前门大街、大栅栏，吃家常北京味。</span></div></div>
-            <div class="reminder">预约提醒｜提前购买天坛联票；故宫周一闭馆，今天不安排。</div>
-          </div>
-        </details>
-
-        <details class="day-card" data-type="beijing">
-          <summary><div class="date"><b>09.29</b><small>DAY 05</small></div><div class="day-name"><b>八达岭长城 → 鸟巢 / 水立方</b><span>全程最重要，也最费体力的一天</span></div><i class="chevron"></i></summary>
-          <div class="day-body">
-            <div class="facts"><div class="fact"><small>交通</small><b>高铁 / 景区专线 + 打车</b></div><div class="fact"><small>建议时间</small><b>07:00—20:30</b></div><div class="fact"><small>强度</small><b>较高 <span class="strength"><i class="on"></i><i class="on"></i><i class="on"></i></span></b></div></div>
-            <div class="schedule"><div><time>上午</time><span>八达岭长城，父母优先乘缆车，量力而行。</span></div><div><time>下午</time><span>简单午餐后返城，酒店休息。</span></div><div><time>晚上</time><span>鸟巢、水立方看夜景，不进场馆也足够。</span></div></div>
-            <div class="reminder">预约提醒｜提前订长城门票及往返交通；给老人准备护膝、登山杖和水。</div>
-          </div>
-        </details>
-
-        <details class="day-card" data-type="beijing transit">
-          <summary><div class="date"><b>09.30</b><small>DAY 06</small></div><div class="day-name"><b>天安门 → 故宫 → 洛阳</b><span>父母的北京心愿，在国庆前完成</span></div><i class="chevron"></i></summary>
-          <div class="day-body">
-            <div class="facts"><div class="fact"><small>交通</small><b>步行 + 地铁 + 晚间高铁</b></div><div class="fact"><small>建议时间</small><b>06:30 出发，18:00 后返程</b></div><div class="fact"><small>强度</small><b>较高 <span class="strength"><i class="on"></i><i class="on"></i><i class="on"></i></span></b></div></div>
-            <div class="schedule"><div><time>清晨</time><span>天安门广场，给一家四口认真拍一张合照。</span></div><div><time>08:30—13:00</time><span>故宫中轴线游览，减少支线，不求走遍。</span></div><div><time>下午至晚间</time><span>午餐、取行李、前往北京西站，回洛阳。</span></div></div>
-            <div class="reminder">重要预约｜天安门、故宫均需实名预约；证件随身，预留安检时间。</div>
-          </div>
-        </details>
-
-        <details class="day-card" data-type="rest">
-          <summary><div class="date"><b>10.01—04</b><small>DAY 07—10</small></div><div class="day-name"><b>洛阳休息 / 家庭日</b><span>别人挤景区，我们在家过日子</span></div><i class="chevron"></i></summary>
-          <div class="day-body">
-            <div class="facts"><div class="fact"><small>交通</small><b>不跨城</b></div><div class="fact"><small>建议时间</small><b>四天自由安排</b></div><div class="fact"><small>强度</small><b>很轻松 <span class="strength"><i class="on"></i><i></i><i></i></span></b></div></div>
-            <div class="schedule"><div><time>日常</time><span>睡觉、吃饭、陪爸妈、见亲友。</span></div><div><time>可选</time><span>家附近散步，避开龙门、白马寺等热门景区。</span></div><div><time>留白</time><span>至少留一天完全不安排，让身体恢复。</span></div></div>
-            <div class="reminder">行前提醒｜10月4日确认返程车次、证件和行李。</div>
-          </div>
-        </details>
-
-        <details class="day-card" data-type="transit">
-          <summary><div class="date"><b>10.05</b><small>DAY 11</small></div><div class="day-name"><b>洛阳 → 广州</b><span>提前返程，避开最后两天高峰</span></div><i class="chevron"></i></summary>
-          <div class="day-body">
-            <div class="facts"><div class="fact"><small>交通</small><b>高铁｜洛阳龙门 → 广州南</b></div><div class="fact"><small>建议时间</small><b>上午 / 中午出发</b></div><div class="fact"><small>强度</small><b>适中 <span class="strength"><i class="on"></i><i class="on"></i><i></i></span></b></div></div>
-            <div class="schedule"><div><time>上午</time><span>早餐、告别，提前到洛阳龙门站。</span></div><div><time>途中</time><span>高铁上休息，不再安排中转游玩。</span></div><div><time>抵达</time><span>简单收拾，外卖或家常饭，早睡。</span></div></div>
-            <div class="reminder">抢票提醒｜返程票是全程最高优先级之一，开售即订。</div>
-          </div>
-        </details>
-
-        <details class="day-card" data-type="rest">
-          <summary><div class="date"><b>10.06—07</b><small>DAY 12—13</small></div><div class="day-name"><b>广州休息</b><span>给假期留一个柔软的结尾</span></div><i class="chevron"></i></summary>
-          <div class="day-body">
-            <div class="facts"><div class="fact"><small>交通</small><b>不出远门</b></div><div class="fact"><small>建议时间</small><b>两天居家</b></div><div class="fact"><small>强度</small><b>很轻松 <span class="strength"><i class="on"></i><i></i><i></i></span></b></div></div>
-            <div class="schedule"><div><time>10月6日</time><span>洗衣、整理照片、睡到自然醒。</span></div><div><time>10月7日</time><span>两个人吃顿喜欢的饭，整理第二天上班物品。</span></div><div><time>晚上</time><span>早点睡，带着余裕结束长假。</span></div></div>
-            <div class="reminder">最后提醒｜不再加景点。把休息本身，当作行程的一部分。</div>
-          </div>
-        </details>
-      </div>
-      <p class="empty" id="empty">这个分类下暂时没有行程。</p>
-    </section>
-
-    <section class="booking" id="booking">
-      <div class="booking-head">
-        <div><p class="eyebrow">BOOKING CHECKLIST</p><h2 class="section-title">四件必须提前订</h2></div>
-        <span class="booking-count" id="bookingCount">0 / 4 已完成</span>
-      </div>
-      <div class="checks">
-        <label class="check"><input type="checkbox" data-booking="train"><span>往返高铁票</span></label>
-        <label class="check"><input type="checkbox" data-booking="palace"><span>故宫实名预约</span></label>
-        <label class="check"><input type="checkbox" data-booking="square"><span>天安门广场预约</span></label>
-        <label class="check"><input type="checkbox" data-booking="wall"><span>八达岭门票与交通</span></label>
-      </div>
-      <div class="mini-track"><i id="bookingProgress"></i></div>
-    </section>
-
-    <section class="budget" id="budget">
-      <p>FAMILY BUDGET</p>
-      <h2 class="section-title">一家四口预算</h2>
-      <div class="budget-switch" role="group" aria-label="预算档位">
-        <button data-budget=".85">精简</button><button data-budget="1" class="active">舒适</button><button data-budget="1.25">宽松</button>
-      </div>
-      <div class="budget-grid">
-        <div class="budget-row"><span>广州 ↔ 洛阳｜夫妻</span><b data-min="3000" data-max="4000"></b></div>
-        <div class="budget-row"><span>洛阳 ↔ 北京｜四人</span><b data-min="2500" data-max="3500"></b></div>
-        <div class="budget-row"><span>北京住宿｜2间 × 3晚</span><b data-min="2500" data-max="4500"></b></div>
-        <div class="budget-row"><span>吃饭</span><b data-min="1500" data-max="2000"></b></div>
-        <div class="budget-row"><span>门票 + 北京交通</span><b data-min="800" data-max="1500"></b></div>
-      </div>
-      <div class="budget-total"><span>预计总预算</span><b id="budgetTotal">¥10,300—15,500</b></div>
-    </section>
-
-    <section class="map-section">
-      <p>BEIJING PLACES</p>
-      <h2 class="section-title">北京景点信息</h2>
-      <p style="color:var(--muted);font-size:13px;margin:10px 0 24px">点击红色标记，查看当天安排。</p>
-      <div class="map">
-        <button class="pin active" style="left:57%;top:61%" data-place="天坛" data-note="09.28 上午｜祈年殿、回音壁、圜丘"><i></i><span>天坛</span></button>
-        <button class="pin" style="left:44%;top:53%" data-place="前门" data-note="09.28 下午｜前门大街与大栅栏"><i></i><span>前门</span></button>
-        <button class="pin" style="left:49%;top:34%" data-place="故宫" data-note="09.30 上午｜沿中轴线游览"><i></i><span>故宫</span></button>
-        <button class="pin" style="left:68%;top:19%" data-place="鸟巢" data-note="09.29 晚上｜鸟巢、水立方夜景"><i></i><span>鸟巢</span></button>
-        <button class="pin" style="left:18%;top:20%" data-place="八达岭" data-note="09.29 上午｜缆车上下，量力而行"><i></i><span>八达岭</span></button>
-        <div class="map-note"><b id="placeName">天坛</b><span id="placeNote">09.28 上午｜祈年殿、回音壁、圜丘</span></div>
-      </div>
-    </section>
-  </main>
-
-  <footer><b>慢一点，才看得见彼此。</b><small>13 DAYS · 4 PEOPLE · ONE FAMILY JOURNEY</small></footer>
-  <button class="top" id="backTop" aria-label="返回顶部">↑</button>
-
+  <div class="shell" id="app">
+    <button class="parent-toggle" id="parentToggle"><i>爸</i><span>爸妈查看版</span></button>
+    <header class="hero" id="home">
+      <nav class="hero-nav"><span class="brand">京</span><span class="hero-date">2026 · 秋</span></nav>
+      <div class="sun"></div><div class="gate back"></div><div class="gate front"></div>
+      <div class="hero-copy"><p class="eyebrow">A FAMILY JOURNEY · 13 DAYS</p><h1>北京<br>圆梦之旅</h1><p class="hero-lead">这一次，不只是旅行。<br>是陪爸妈完成一次北京心愿。</p></div>
+      <div class="route"><div><small>出发</small><strong>广州</strong></div><i class="line"></i><div><small>相聚</small><strong>北京</strong></div><i class="line"></i><div><small>团圆</small><strong>洛阳</strong></div></div>
+      <button class="start" data-go="journey">开始旅程 ↓</button>
+    </header>
+    <section class="parent-box"><p class="kicker">爸妈请看这里</p><h2>北京这几天，<br>咱们慢慢走。</h2><div class="parent-plan"><article><b>9月28日</b><strong>天坛、前门</strong><span>穿舒服鞋 · 不赶路</span></article><article><b>9月29日</b><strong>八达岭长城</strong><span>坐索道 · 重点拍合影</span></article><article><b>9月30日</b><strong>天安门、故宫</strong><span>带身份证 · 累了就休息</span></article></div><div class="love-note"><strong>最重要的事：</strong>药和身份证放随身小包。其他事情交给孩子们，咱们开心就好。</div></section>
+    <section class="intro" id="journey"><p class="kicker">OUR STORY · 我们的故事</p><h2>2026 年秋天，<br>我们带爸妈去北京。</h2><p>从广州出发，在北京相聚，再一起回到洛阳。十三天，三座城，一家人的共同记忆。</p><div class="facts"><div><strong>13</strong><span>天假期</span></div><div><strong>3</strong><span>座城市</span></div><div><strong>4</strong><span>个人</span></div></div></section>
+    <section class="section itinerary" id="itinerary"><div class="heading"><div><p class="kicker">ITINERARY · 行程</p><h2>十三天，<br>每一天都有意义。</h2></div><p>点击日期，查看当天安排</p></div><div class="timeline" id="timeline"></div></section>
+    <section class="section wish"><div class="wish-copy"><p class="kicker">WISH LIST · 心愿单</p><h2>来北京，<br>把这些愿望一一实现。</h2><p>不用追求看完所有风景。一家人在一起，就是这次旅行的答案。</p></div><div class="wish-grid"><div><span>01</span><strong>天安门前合影</strong><i class="wish-check">○</i></div><div><span>02</span><strong>看故宫红墙</strong><i class="wish-check">○</i></div><div><span>03</span><strong>登一次八达岭</strong><i class="wish-check">○</i></div><div><span>04</span><strong>看鸟巢夜景</strong><i class="wish-check">○</i></div><div><span>05</span><strong>吃一顿北京味道</strong><i class="wish-check">○</i></div><div><span>06</span><strong>拍一家四口合影</strong><i class="wish-check">○</i></div></div></section>
+    <section class="section reminders" id="reminders"><div class="heading"><div><p class="kicker">REMINDERS · 预约提醒</p><h2>重要的事，<br>提前记下来。</h2></div><p>具体规则以官方最新通知为准</p></div><div class="reminder-grid"><article class="reminder"><div class="reminder-top"><span>09.20 起</span><b>每日确认</b></div><h3>天安门广场预约</h3><p>查看最新规则与开放时段；四人身份证信息提前准备好。</p></article><article class="reminder"><div class="reminder-top"><span>09.23 前后</span><b>重点提醒</b></div><h3>故宫博物院门票</h3><p>目标参观日 9 月 30 日。放票规则可能调整，以官方信息为准。</p></article><article class="reminder"><div class="reminder-top"><span>行前确认</span><b>交通确认</b></div><h3>八达岭往返</h3><p>提前确定高铁或巴士与索道方案，优先少换乘、少步行。</p></article><article class="reminder"><div class="reminder-top"><span>开售即买</span><b>国庆车票</b></div><h3>北京 → 洛阳</h3><p>目标 10 月 1 日。预先填好四位乘车人信息。</p></article></div></section>
+    <section class="section budget" id="budget"><div><p class="kicker">BUDGET · 旅行预算</p><h2>一家四口，<br>预算做到心里有数。</h2><div class="budget-total"><small>预计总预算</small><strong>¥13,000</strong><span id="actualText">当前记录 ¥0</span></div></div><div class="budget-list" id="budgetList"></div><div class="balance"><span id="balanceLabel">预算剩余</span><strong id="balanceValue">¥13,000</strong><small>实际花费只保存在当前设备上</small></div></section>
+    <section class="section checklist" id="checklist"><div class="heading"><div><p class="kicker">CHECKLIST · 出发准备</p><h2>准备妥当，<br>出发就更从容。</h2></div><p id="checkCount">0/16 已完成</p></div><div class="progress"><i id="checkProgress" style="width:0"></i></div><div class="check-grid" id="checkGrid"></div></section>
+    <footer><p class="kicker">2026 · FAMILY MEMORY</p><h2>等我们回来，<br>这里会变成一份家庭纪念册。</h2><p>广州出发 · 北京相聚 · 洛阳团圆</p><small>2026.09.26 — 10.07 · 一家四口</small></footer>
+    <nav class="bottom"><button data-go="home"><span>⌂</span>首页</button><button data-go="itinerary"><span>日</span>行程</button><button data-go="reminders"><span>铃</span>预约</button><button data-go="budget"><span>¥</span>预算</button><button data-go="checklist"><span>✓</span>准备</button></nav>
+  </div>
   <script>
-    (() => {
-      const $ = (s, root=document) => root.querySelector(s);
-      const $$ = (s, root=document) => [...root.querySelectorAll(s)];
-      const tripStart = new Date('2026-09-25T00:00:00+08:00');
-      const tripEnd = new Date('2026-10-07T23:59:59+08:00');
-      const now = new Date();
-      const day = 86400000;
-      let percent = 0, status = '', title = '';
-      if (now < tripStart) {
-        const left = Math.max(1, Math.ceil((tripStart - now) / day));
-        status = '距离出发 ' + left + ' 天';
-        title = left === 1 ? '明天出发，准备团圆' : '距离出发还有 ' + left + ' 天';
-      } else if (now <= tripEnd) {
-        percent = Math.min(100, Math.max(0, ((now - tripStart) / (tripEnd - tripStart)) * 100));
-        const tripDay = Math.min(13, Math.floor((now - tripStart) / day) + 1);
-        status = '旅程进行中 · DAY ' + String(tripDay).padStart(2,'0');
-        title = '现在，正在共同经历这段旅程';
-      } else {
-        percent = 100; status = '旅程已圆满结束'; title = '十三天，已经成为一家人的记忆';
-      }
-      $('#tripStatus').textContent = status;
-      $('#progressTitle').textContent = title;
-      $('#progressText').textContent = Math.round(percent) + '%';
-      requestAnimationFrame(() => $('#tripProgress').style.width = percent + '%');
-
-      const cards = $$('.day-card');
-      $$('.chip').forEach(btn => btn.addEventListener('click', () => {
-        $$('.chip').forEach(x => x.classList.remove('active'));
-        btn.classList.add('active');
-        const filter = btn.dataset.filter;
-        let visible = 0;
-        cards.forEach(card => {
-          const show = filter === 'all' || card.dataset.type.split(' ').includes(filter);
-          card.hidden = !show;
-          if (show) visible++;
-        });
-        $('#empty').style.display = visible ? 'none' : 'block';
-      }));
-
-      $('#toggleAll').addEventListener('click', e => {
-        const visible = cards.filter(x => !x.hidden);
-        const shouldOpen = visible.some(x => !x.open);
-        visible.forEach(x => x.open = shouldOpen);
-        e.currentTarget.textContent = shouldOpen ? '全部收起' : '全部展开';
-      });
-
-      const bookingInputs = $$('[data-booking]');
-      let saved = {};
-      try { saved = JSON.parse(localStorage.getItem('familyJourneyBookings') || '{}'); } catch(e) {}
-      bookingInputs.forEach(input => {
-        input.checked = !!saved[input.dataset.booking];
-        input.addEventListener('change', () => {
-          saved[input.dataset.booking] = input.checked;
-          localStorage.setItem('familyJourneyBookings', JSON.stringify(saved));
-          updateBookings();
-        });
-      });
-      function updateBookings() {
-        const done = bookingInputs.filter(x => x.checked).length;
-        $('#bookingCount').textContent = done + ' / ' + bookingInputs.length + ' 已完成';
-        $('#bookingProgress').style.width = (done / bookingInputs.length * 100) + '%';
-      }
-      updateBookings();
-
-      function setBudget(multiplier) {
-        let min = 0, max = 0;
-        $$('.budget-row b').forEach(el => {
-          const lo = Math.round(+el.dataset.min * multiplier / 100) * 100;
-          const hi = Math.round(+el.dataset.max * multiplier / 100) * 100;
-          min += lo; max += hi;
-          el.textContent = '¥' + lo.toLocaleString() + '—' + hi.toLocaleString();
-        });
-        $('#budgetTotal').textContent = '¥' + min.toLocaleString() + '—' + max.toLocaleString();
-      }
-      $$('.budget-switch button').forEach(btn => btn.addEventListener('click', () => {
-        $$('.budget-switch button').forEach(x => x.classList.remove('active'));
-        btn.classList.add('active');
-        setBudget(+btn.dataset.budget);
-        localStorage.setItem('familyJourneyBudget', btn.dataset.budget);
-      }));
-      const savedBudget = localStorage.getItem('familyJourneyBudget') || '1';
-      const savedBtn = $('.budget-switch button[data-budget="' + savedBudget + '"]') || $('.budget-switch button[data-budget="1"]');
-      savedBtn.click();
-
-      $$('.pin').forEach(pin => pin.addEventListener('click', () => {
-        $$('.pin').forEach(x => x.classList.remove('active'));
-        pin.classList.add('active');
-        $('#placeName').textContent = pin.dataset.place;
-        $('#placeNote').textContent = pin.dataset.note;
-      }));
-
-      const top = $('#backTop');
-      addEventListener('scroll', () => top.classList.toggle('show', scrollY > 700), {passive:true});
-      top.addEventListener('click', () => scrollTo({top:0,behavior:'smooth'}));
-    })();
+    const days=[
+      ['09.26','周六','✈','广州 → 北京','夫妻二人先出发，抵达后好好休息',['13:50 广州白云 T3 出发','深圳航空 ZH8695 + ZH9172（当前参考）','20:40 抵达北京首都 T3','前往酒店，简单用餐后休息'],'航班可能调整，出发前 24 小时再核对一次。'],
+      ['09.27','周日','合','北京相聚','爸妈从洛阳抵达，一家四口集合',['爸妈：洛阳龙门 → 北京西（车次待定）','预留充足接站时间','入住后在酒店附近吃饭','晚上不排行程，早点休息'],'爸妈把身份证放在随身小包里，不托运。'],
+      ['09.28','周一','坛','天坛 · 前门','慢慢认识北京，从一座古老的坛开始',['上午：天坛公园，祈年殿合影','中午：前门附近午餐','下午：前门大街与大栅栏慢逛','傍晚：早点回酒店休息'],'今天不赶景点，走累了就坐下喝杯茶。'],
+      ['09.29','周二','城','八达岭 · 奥林匹克公园','完成爸妈的长城心愿',['早出发前往八达岭长城','优先选择索道上下，保存体力','午后返回市区休息','傍晚看鸟巢、水立方夜景'],'今天的目标不是爬多远，是一家人在长城留下照片。'],
+      ['09.30','周三','宫','天安门 · 故宫','把北京最重要的记忆留到这一天',['早晨：天安门广场合影','按预约时段进入故宫','沿中轴线慢慢参观','神武门离开，尽量不走回头路'],'一定穿最舒服的鞋，随身带水和少量食品。'],
+      ['10.01','周四','🚄','北京 → 洛阳','带着照片，一家人回洛阳过节',['早餐后整理行李','按高铁时间前往车站','北京 → 洛阳（车次待定）','到家后一起吃顿团圆饭'],'国庆首日客流大，车票开放后尽快购买。'],
+      ['10.02—04','周五—周日','家','洛阳陪父母','不赶路，陪爸妈好好过几天',['在家休息、整理北京照片','陪爸妈吃饭聊天','根据体力安排本地散步','留一晚做家庭照片小放映'],'真正珍贵的行程，有时就是一家人在家坐坐。'],
+      ['10.05','周一','返','洛阳 → 广州','夫妻返穗，结束这次圆梦旅行',['上午陪爸妈吃饭','确认行李和证件','前往车站或机场','晚上回到广州'],'返程方式确定后，把信息补进家庭群置顶。'],
+      ['10.06—07','周二—周三','歇','广州休整','让回忆慢慢沉淀',['睡到自然醒','整理行李与照片','补记实际旅行花费','挑选一家四口合影打印'],'给爸妈挑几张照片洗出来，比存在手机里更有温度。']
+    ];
+    document.getElementById('timeline').innerHTML=days.map((d,i)=>`<details class="day" ${i===2?'open':''}><summary><span class="day-icon">${d[2]}</span><span class="day-date"><b>${d[0]}</b><small>${d[1]}</small></span><span class="day-main"><strong>${d[3]}</strong><small>${d[4]}</small></span><span class="plus">+</span></summary><div class="day-body"><div class="day-list">${d[5].map((x,j)=>`<p><b>${String(j+1).padStart(2,'0')}</b><span>${x}</span></p>`).join('')}</div><blockquote class="tip">“${d[6]}”</blockquote></div></details>`).join('');
+    const budget=[['transport','大交通',5160],['hotel','住宿',3600],['food','餐饮',1800],['tickets','门票与市内交通',1200],['other','纪念品与备用',1240]];
+    let actual={};try{actual=JSON.parse(localStorage.getItem('trip-budget')||'{}')}catch(e){}
+    document.getElementById('budgetList').innerHTML=budget.map(x=>`<label><span class="budget-name"><strong>${x[1]}</strong><small>预计 ¥${x[2].toLocaleString()}</small></span><span class="money">¥<input inputmode="numeric" data-key="${x[0]}" value="${actual[x[0]]||''}" placeholder="实际花费"></span></label>`).join('');
+    function updateBudget(){const total=Object.values(actual).reduce((a,b)=>a+(Number(b)||0),0),left=13000-total;document.getElementById('actualText').textContent='当前记录 ¥'+total.toLocaleString();document.getElementById('balanceLabel').textContent=left>=0?'预算剩余':'超出预算';document.getElementById('balanceValue').textContent='¥'+Math.abs(left).toLocaleString();localStorage.setItem('trip-budget',JSON.stringify(actual))}
+    document.querySelectorAll('[data-key]').forEach(el=>el.addEventListener('input',e=>{actual[e.target.dataset.key]=Number(e.target.value.replace(/\D/g,''));e.target.value=actual[e.target.dataset.key]||'';updateBudget()}));updateBudget();
+    const groups=[['证件与票务',['四人身份证','机票与高铁票复核','酒店订单截图','景区预约凭证']],['爸妈随身包',['常用药与病历信息','保温杯与纸巾','充电宝和充电线','紧急联系人卡片']],['北京秋日穿搭',['舒服防滑的鞋','薄外套与长裤','遮阳帽或雨具','轻便双肩包']],['留下回忆',['手机清理存储空间','一家四口合影计划','便携自拍杆','回家后打印照片']]];
+    let checks={};try{checks=JSON.parse(localStorage.getItem('trip-checklist')||'{}')}catch(e){}
+    document.getElementById('checkGrid').innerHTML=groups.map(g=>`<article class="check-card"><h3>${g[0]}</h3>${g[1].map(x=>`<label class="${checks[x]?'done':''}"><input type="checkbox" data-item="${x}" ${checks[x]?'checked':''}><i>${checks[x]?'✓':''}</i><span>${x}</span></label>`).join('')}</article>`).join('');
+    function updateChecks(){const done=Object.values(checks).filter(Boolean).length;document.getElementById('checkCount').textContent=done+'/16 已完成';document.getElementById('checkProgress').style.width=(done/16*100)+'%';localStorage.setItem('trip-checklist',JSON.stringify(checks))}
+    document.querySelectorAll('[data-item]').forEach(el=>el.addEventListener('change',e=>{checks[e.target.dataset.item]=e.target.checked;const label=e.target.closest('label');label.classList.toggle('done',e.target.checked);label.querySelector('i').textContent=e.target.checked?'✓':'';updateChecks()}));updateChecks();
+    document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>document.getElementById(b.dataset.go).scrollIntoView({behavior:'smooth'})));
+    document.getElementById('parentToggle').addEventListener('click',e=>{const on=document.getElementById('app').classList.toggle('parent-view');e.currentTarget.querySelector('i').textContent=on?'×':'爸';e.currentTarget.querySelector('span').textContent=on?'退出爸妈版':'爸妈查看版';if(on)document.querySelector('.parent-box').scrollIntoView({behavior:'smooth'})});
   </script>
 </body>
 </html>
-
